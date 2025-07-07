@@ -1,6 +1,8 @@
-import s from "./BudgetsChart.module.scss";
-import data from "../../data/data.json";
-import { PieChart, Pie, Cell } from "recharts";
+import s from './BudgetsChart.module.scss';
+import data from '../../data/data.json';
+import { PieChart, Pie, Cell } from 'recharts';
+import { Link } from 'react-router-dom';
+import caretRight from '/public/images/icon-caret-right.svg';
 
 type BudgetsItem = {
   category: string;
@@ -8,22 +10,23 @@ type BudgetsItem = {
   theme: string;
 };
 
+const budgets: BudgetsItem[] = data.budgets;
+
+const pieData = budgets.map(item => ({
+  name: item.category,
+  value: item.maximum,
+  color: item.theme,
+}));
+
 function BudgetsChart() {
-  const budgets: BudgetsItem[] = data.budgets;
-
-  const pieData = budgets.map((item) => ({
-    name: item.category,
-    value: item.maximum,
-    color: item.theme,
-  }));
-
   return (
     <div className={s.budgetsChart}>
       <div className={s.header}>
         <span className={s.textPresent2}>Budgets</span>
         <div className={s.seeDetails}>
-          <a href="/pots">See Details</a>
-          <img src="/images/icon-caret-right.svg" alt="icon" />
+          <Link to="/pots">See Details</Link>
+
+          <img src={caretRight} alt="icon" />
         </div>
       </div>
 
@@ -48,12 +51,9 @@ function BudgetsChart() {
         </div>
 
         <ul className={s.potsList}>
-          {budgets.map((item) => (
+          {budgets.map(item => (
             <li key={item.category}>
-              <span
-                className={s.colorLine}
-                style={{ backgroundColor: item.theme }}
-              />
+              <span className={s.colorLine} style={{ backgroundColor: item.theme }} />
               <div className={s.info}>
                 <span className={s.name}>{item.category}</span>
                 <span className={s.amount}>${item.maximum.toFixed(2)}</span>

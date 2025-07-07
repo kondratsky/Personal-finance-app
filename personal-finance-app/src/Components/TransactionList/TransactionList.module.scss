@@ -1,128 +1,111 @@
 .transactionList {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    border-radius: 12px;
-    background-color: white;
-   
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 12px;
+  background-color: white;
 
-    .header {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 32px 0px 32px;
+
+    .textPresent2 {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 120%;
+      letter-spacing: 0px;
+    }
+
+    .viewAll {
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0px;
+        color: #696868;
+
+        &:hover {
+          color: black;
+          transition: color 0.5s ease;
+        }
+      }
+
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
+    }
+  }
+
+  .transaction {
+    padding: 0px 32px 32px 32px;
+    margin: 0px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-decoration: none;
+
+      .row {
         display: flex;
         justify-content: space-between;
-        padding: 32px 32px 0px 32px;
+        align-items: center;
+      }
 
+      .information {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 16px;
+        width: 100%;
 
-        .textPresent2 {
-            font-family: "Public Sans";
-            font-weight: bold;
-            font-size: 20px;
-            line-height: 120%;
-            letter-spacing: 0px;
+        .avatar {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
         }
 
-        .viewAll {
-            a {
-                text-decoration: none;
-                font-family: "Public Sans";
-                font-size: 14px;
-                line-height: 120%;
-                letter-spacing: 0px;
-                color: #696868;
-
-                &:hover {
-                    color: black;
-                    transition: color 0.5s ease;
-                }
-
-            }
-
-            display: flex;
-            flex-direction: row;
-            gap:12px;
-            align-items: center;
-
+        .name {
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 150%;
+          letter-spacing: 0px;
+          color: grey-900;
         }
+      }
+
+      .howMuchAndWhere {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .amount {
+          text-align: end;
+        }
+        .plus {
+          color: green;
+        }
+        .minus {
+          color: red;
+        }
+
+        .date {
+          font-size: 12px;
+          line-height: 150%;
+          color: #696868;
+          white-space: nowrap;
+        }
+      }
+
+      hr {
+        border: none;
+        height: 1px;
+        background-color: #e0e0e0;
+        width: 100%;
+      }
     }
-
-    .transaction {
-
-        padding: 0px 32px 32px 32px;
-        margin:0px;
-
-        li {
-
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            text-decoration: none;
-
-            .row {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .information {
-
-                display: flex;
-                align-items: center;
-                flex-direction: row;
-                gap: 16px;
-                width: 100%;
-
-                .avatar {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                }
-
-                .name {
-                    font-weight: bold;
-                    font-family: "Public Sans";
-                    font-size: 14px;
-                    line-height: 150%;
-                    letter-spacing: 0px;
-                    color: grey-900;
-                }
-            }
-
-
-
-
-            .howMuchAndWhere {
-
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-
-                .amount{
-                    text-align: end;
-                }
-                .plus{
-                    color:green;
-                }
-                .minus{
-                    color:red;
-                }
-
-                .date{
-                    font-family: "Public Sans";
-                    font-size: 12px;
-                    line-height: 150%;
-                    color:#696868;
-                     white-space: nowrap;
-                }
-            }
-
-            hr {
-                border: none;
-                height: 1px;
-                background-color: #E0E0E0;
-                width: 100%;
-            }
-
-        }
-
-    }
+  }
 }

@@ -1,89 +1,76 @@
 .recurringBills {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  height: auto;
+
+  .header {
     display: flex;
-    flex-direction: column;
-    gap: 32px;
-   
-    background-color: white;
-    border-radius: 12px;
-    padding: 32px;
-    height: auto;
+    justify-content: space-between;
 
-    .header {
+    .textPresent2 {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .seeDetails {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      a {
+        font-size: 14px;
+        color: #696868;
+        text-decoration: none;
+
+        &:hover {
+          color: black;
+          transition: color 0.5s ease;
+        }
+      }
+    }
+  }
+
+  .main {
+    .billsList {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 0;
+
+      li {
+        background-color: #f8f4f0;
+        list-style: none;
+        font-size: 14px;
+        color: #696868;
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
 
-        .textPresent2 {
-            font-family: "Public Sans";
-            font-weight: bold;
-            font-size: 20px;
+        .colorStripe {
+          width: 6px;
+          flex-shrink: 0;
+          border-radius: 8px 0 0 8px;
         }
 
-        .seeDetails {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-
-            a {
-                font-family: "Public Sans";
-                font-size: 14px;
-                color: #696868;
-                text-decoration: none;
-
-                &:hover {
-                    color: black;
-                    transition: color 0.5s ease;
-                }
-            }
+        .content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding: 20px 16px;
         }
+
+        .amount {
+          font-weight: bold;
+          font-size: 14px;
+          line-height: 150%;
+          color: black;
+        }
+      }
     }
-
-    .main {
-
-        .billsList {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            padding: 0;
-
-            li {
-                background-color: #F8F4F0;
-                list-style: none;
-                font-family: "Public Sans";
-                font-size: 14px;
-                color: #696868;
-                display: flex;
-                flex-direction: row;
-
-
-
-
-
-                .colorStripe {
-
-                    width: 6px;
-                    flex-shrink: 0;
-                    border-radius: 8px 0 0 8px;
-
-
-                }
-
-                .content {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 100%;
-                    padding: 20px 16px;
-                }
-
-
-                .amount {
-                    font-family: "Public Sans";
-                    font-weight: bold;
-                    font-size: 14px;
-                    line-height: 150%;
-                    color: black;
-                }
-            }
-        }
-    }
+  }
 }

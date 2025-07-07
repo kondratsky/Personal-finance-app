@@ -1,17 +1,15 @@
 .Overview {
-  font-family: "Public Sans";
-  width:100%;
+  width: 100%;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   gap: 32px;
   padding: 32px 40px;
-  // border: 1px solid red;
-  background-color: #F8F4F0;
-  
-  @media (max-width:768px) {
+  box-sizing: border-box;
+  background-color: #f8f4f0;
+
+  @media (max-width: 1140px) {
     flex-direction: column;
-    border: 1px solid red;
   }
 
   h2 {
@@ -23,9 +21,9 @@
     grid-template-columns: 2fr 1fr;
     gap: 20px;
     width: 100%;
-     @media (max-width:768px) {
-   grid-template-columns: auto;
-  }
+    @media (max-width: 1140px) {
+      grid-template-columns: auto;
+    }
 
     .leftColumn {
       display: flex;

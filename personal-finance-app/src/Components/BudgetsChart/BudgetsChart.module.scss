@@ -12,11 +12,7 @@
     display: flex;
     justify-content: space-between;
 
-
-
-
     .textPresent2 {
-      font-family: "Public Sans";
       font-weight: bold;
       font-size: 20px;
     }
@@ -27,7 +23,6 @@
       align-items: center;
 
       a {
-        font-family: "Public Sans";
         font-size: 14px;
         color: #696868;
         text-decoration: none;
@@ -43,10 +38,10 @@
   .main {
     display: flex;
     flex-direction: row;
-
     gap: 20px;
-
-
+    @media (max-width: 1140px) {
+      justify-content: space-between;
+    }
 
     .chartWrapper {
       width: 200px;
@@ -55,13 +50,11 @@
       justify-content: center;
       align-items: center;
       gap: 16px;
- 
       margin: 31px 0px;
 
-      @media (max-width:768px){
-        width:74%;
+      @media (max-width: 1140px) {
+        width: 100%;
       }
-
     }
 
     .potsList {
@@ -70,7 +63,6 @@
       gap: 16px;
 
       padding: 0;
-
 
       li {
         display: flex;

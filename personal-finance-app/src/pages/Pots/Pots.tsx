@@ -1,8 +1,6 @@
-import s from "./Pots.module.scss";
+import s from './Pots.module.scss';
 
-function Pots () {
-    return (
-        <div className={s.pots}>Pots</div>
-    );
+function Pots() {
+  return <div className={s.pots}>Pots</div>;
 }
 export default Pots;
