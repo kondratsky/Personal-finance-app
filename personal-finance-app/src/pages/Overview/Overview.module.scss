@@ -1,0 +1,40 @@
+.Overview {
+  width: 100%;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px 40px;
+  box-sizing: border-box;
+  background-color: #f8f4f0;
+
+  @media (max-width: 1140px) {
+    flex-direction: column;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    width: 100%;
+    @media (max-width: 1140px) {
+      grid-template-columns: auto;
+    }
+
+    .leftColumn {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .rightColumn {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}
